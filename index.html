@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link 
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" 
+      rel="stylesheet" 
+    />
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">Shopping Site</a>
+
+            <div class="cart-icon" id="cart-icon">
+                <i class="ri-shopping-cart-2-line"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="products container">
+        <div class="product-card">
+            <img src="https://assets.myntassets.com/h_1440,q_75,w_1080/v1/assets/images/10948614/2025/2/15/c5f225d0-e38e-43cf-9c74-4034bc0561bd1739614460637-LOCOMOTIVE-Men-Blue-Solid-Denim-Jacket-4281739614460141-1.jpg" alt="" class="product-image">
+            <h2 class="product-name">Solid Blue Denim Jacket</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$399</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://redtape.com/cdn/shop/files/RDM1084A_1.jpg?v=1754286431" alt="" class="product-image">
+            <h2 class="product-name">Soft Blue Regular Jeans </h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$459</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://cottonfolk.in/cdn/shop/files/Men_sBrownPinstripeShort-SleeveShirt.jpg?v=1732268509&width=2048"" alt="" class="product-image">
+            <h2 class="product-name">Brown Short Sleeve Shirt</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$586</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScnNqXAhyZF-VuUqIo0bjxWxUZHY1qecaSmg&s" alt="" class="product-image">
+            <h2 class="product-name">White Collar T-shirt</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$347</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://i.pinimg.com/474x/9e/3d/1c/9e3d1cba8d8b3d9ff08ad2f65608304f.jpg" alt="" class="product-image">
+            <h2 class="product-name">Summer Floral Maxi Dress</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$299</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://www.libas.in/cdn/shop/files/29867I_2Main_7e0fa86d-8dd1-4461-a741-94533b962fc4.jpg?v=1761741200&width=1080" alt="" class="product-image">
+            <h2 class="product-name">Frocks</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$476</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://img.freepik.com/premium-photo/realistic-photograph-executive-women-business-attire_1288657-205002.jpg?semt=ais_incoming&w=740&q=80" alt="" class="product-image">
+            <h2 class="product-name">Formal Dress</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$599</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://pictures.kartmax.in/cover/live/300x400/quality=6/sites/9s145MyZrWdIAwpU0JYS/product-images/maroon_silk_embroidered_v_neck_casual_kurti_for_women_1774417415_AS3638505.jpg" alt="" class="product-image">
+            <h2 class="product-name">Kurtis</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$356</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://www.rajwadafurnish.com/cdn/shop/files/Devanti-Traditional-Solid-Wood-4-Seater-Dining-Table-Sets-honey-rajawada-furnish.webp?v=1737910691&width=2048" alt="" class="product-image">
+            <h2 class="product-name">Dinning Table Set</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$4,699</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://cellbell.in/cdn/shop/files/black_0.jpg?v=1747630253" alt="" class="product-image">
+            <h2 class="product-name">Ergonomic Office Chair</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$1,199</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/71UUMsukDoL._AC_UF894,1000_QL80_.jpg" alt="" class="product-image">
+            <h2 class="product-name">Sofa Set</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$4,799</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://www.zorin.co.in/cdn/shop/files/AloeKing_Liftstyle_e19a363b-98fc-4c4f-9716-e59a1be79a29.jpg" alt="" class="product-image">
+            <h2 class="product-name">Aloe King Size Bed</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$5,999</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://cdn.shopify.com/s/files/1/0013/9716/2041/files/VGB2-e1507926868493.jpeg?v=1542305364" alt="" class="product-image">
+            <h2 class="product-name">Speaker</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$2,999</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/61RahTQtAqL._AC_UF1000,1000_QL80_.jpg" alt="" class="product-image">
+            <h2 class="product-name">Head Phone</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$1,699</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://s.alicdn.com/@sc04/kf/A7100a5f15acd4b088521dad292cb18131/Hot-Sale-Brand-New-Phone-17-Pro-Max-Phone-6.9-Inch-I-New-17-Pro-Max-Mobile-Phone-Unclocked-4G-5G-Dual-Sim-12GB-1TB-64MP-Camera.jpg" alt="" class="product-image">
+            <h2 class="product-name">Apple Iphone</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$15,999</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://files.vplak.com/images/saregama/CARVAAN/description/battery.jpg" alt="" class="product-image">
+            <h2 class="product-name">Carvaan</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$3,999</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://www.saugatonline.com/products_image/42429f69e07d5d01292432b4e1e35829.jpg" alt="" class="product-image">
+            <h2 class="product-name">Hand Bag</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$2,999</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://i5.walmartimages.com/seo/Poedagar-Men-Watch-Luxury-Business-Quartz-Watches-Stainless-Stain-Strap-Sport-Chronograph-Men-39-s-Wristwatch-Waterproof-Luminous-Quartz-Wristwatches_7b31bf36-11cf-4c68-8dfd-e630bc9a93f6.284ee349d31df69a9da1c2d294e2aade.jpeg" alt="" class="product-image">
+            <h2 class="product-name">Watch</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$3,789</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://assets.ajio.com/medias/sys_master/root/20231013/wt4c/6529494eddf77915193a21fb/-473Wx593H-466703982-rosegold-MODEL.jpg" alt="" class="product-image">
+            <h2 class="product-name">Gold plated bracelete</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$1,299</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2026/MARCH/5/irrgJEFC_ffae9b5d2ef242b1aae04a2a781c1390.jpg" alt="" class="product-image">
+            <h2 class="product-name">Perfume</h2>
+            <div class="product-info">
+                <div class="price-data">
+                    <h2 class="product-price">$3,999</h2>
+                    <p>Details</p>
+                    </div>
+                    <div class="add-to-cart" onclick="addToCart(this.parentElement.parentElement)">
+                        <i class="ri-add-line"></i>
+                    </div>
+            </div>
+        </div>
+</div>
+
+<div class="cart-model" id="cart-model">
+    <div class="cart-head">
+        <h2>Your Cart</h2>
+        <button class="close-btn">X</button>
+    </div>
+    <ul id="cart-items">
+    </ul>
+    <div class="cart-total">Total: $<span id="total-price">0</span></div>
+    <div class="checkout-btn"><a href="checkout.html">Proceed To Checkout</a></div>
+</div>
+
+<!--<img src="" alt="" class="cart-item-image">
+<div class="cart-item-details">
+    <div class="cart-item-name"></div>
+    <div class="cart-item-price"></div>
+</div>
+<div class="quantity-controls">
+    <button onclick="changeQuantity">-</button>
+    <button onclick="changeQuantity">+</button>
+</div>
+<button class="remove-item" onclick="removeItem">x</button> -->
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f5f5f5;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .box {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .row input {
+        flex: 1;
+    }
+
+    .total {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+
+    button:hover {
+        background: #333;
+    }
+
+    .payment-method {
+        margin: 10px 0;
+    }
+
+    @media(max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Shipping Details -->
+    <div class="box">
+        <h2>Shipping Details</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="address" placeholder="Address">
+
+        <div class="row">
+            <input type="text" id="city" placeholder="City">
+            <input type="text" id="zip" placeholder="ZIP Code">
+        </div>
+
+        <select id="country">
+            <option value="">Select Country</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+        </select>
+
+        <h2>Payment Method</h2>
+
+        <div class="payment-method">
+            <input type="radio" name="payment" value="cod" checked> Cash on Delivery
+        </div>
+        <div class="payment-method">
+            <input type="radio" name="payment" value="card"> Credit/Debit Card
+        </div>
+        <div class="payment-method">
+            <input type="radio" name="payment" value="upi"> UPI
+        </div>
+
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+</div>
+
+<script>
+function placeOrder() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const address = document.getElementById("address").value;
+    const city = document.getElementById("city").value;
+    const zip = document.getElementById("zip").value;
+
+    if (!name || !email || !address || !city || !zip) {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    const payment = document.querySelector('input[name="payment"]:checked').value;
+
+    alert("Order placed successfully!\nPayment Method: " + payment);
+
+    // Clear form
+    document.querySelectorAll("input").forEach(input => {
+        if (input.type !== "radio") input.value = "";
+    });
+}
+</script>
+
+</body>
+</html>
